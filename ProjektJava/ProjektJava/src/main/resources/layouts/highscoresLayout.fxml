@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1590.0" stylesheets="@../myStyles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.highscoreController">
+    <children>
+        <ImageView fitHeight="900.0" fitWidth="1600.0" layoutX="-10.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../bigPictures/background.png" />
+            </image>
+        </ImageView>
+      <Pane layoutX="390.0" layoutY="180.0" opacity="0.55" prefHeight="511.0" prefWidth="800.0" style="-fx-background-color: gray;" />
+        <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="1325.0" layoutY="650.0" onMouseClicked="#backToMainMenu" onMouseEntered="#backButtonChange" onMouseExited="#backButtonReset" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../icons/backButton.png" />
+            </image>
+        </ImageView>
+      <ImageView fitHeight="260.0" fitWidth="500.0" layoutX="555.0" layoutY="-20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bigPictures/highscoresLogo.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="390.0" layoutY="180.0" prefHeight="500.0" prefWidth="800.0" styleClass="myStyles.css">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="800.0" style="-fx-border-width: 0 0 1 0; -fx-border-color: black;">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/firstScore.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="firstName" maxHeight="100.0" maxWidth="500.0" minHeight="100.0" minWidth="500.0" prefHeight="100.0" prefWidth="500.0" text="qwert" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Supersonic Rocketship" size="73.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <Label fx:id="firstScore" maxHeight="100.0" maxWidth="200.0" minHeight="100.0" minWidth="200.0" prefHeight="100.0" prefWidth="200.0" text="1" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Supersonic Rocketship" size="73.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="800.0" style="-fx-border-width: 0 0 1 0; -fx-border-color: black;">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/secondScore.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="secondName" maxHeight="100.0" maxWidth="500.0" minHeight="100.0" minWidth="500.0" prefHeight="100.0" prefWidth="500.0" text="test" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Supersonic Rocketship" size="73.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <Label fx:id="secondScore" maxHeight="100.0" maxWidth="200.0" minHeight="100.0" minWidth="200.0" prefHeight="100.0" prefWidth="200.0" text="1" textFill="WHITE">
+                     <font>
+                        <Font name="Supersonic Rocketship" size="73.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="800.0" style="-fx-border-width: 0 0 1 0; -fx-border-color: black;">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/thirdScore.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="thirdName" maxHeight="100.0" maxWidth="500.0" minHeight="100.0" minWidth="500.0" prefHeight="100.0" prefWidth="500.0" text="asdasd" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Supersonic Rocketship" size="73.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <Label fx:id="thirdScore" maxHeight="100.0" maxWidth="200.0" minHeight="100.0" minWidth="200.0" prefHeight="100.0" prefWidth="200.0" text="3" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Supersonic Rocketship" size="73.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="800.0" style="-fx-border-width: 0 0 1 0; -fx-border-color: black;">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/fourthScore.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="fourthName" maxHeight="100.0" maxWidth="500.0" minHeight="100.0" minWidth="500.0" prefHeight="100.0" prefWidth="500.0" text="qq" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Supersonic Rocketship" size="73.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <Label fx:id="fourthScore" maxHeight="100.0" maxWidth="200.0" minHeight="100.0" minWidth="200.0" prefHeight="100.0" prefWidth="200.0" text="6" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Supersonic Rocketship" size="73.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="800.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/fifthScore.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="fifthName" maxHeight="100.0" maxWidth="500.0" minHeight="100.0" minWidth="500.0" prefHeight="100.0" prefWidth="500.0" text="zzzzz" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Supersonic Rocketship" size="73.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <Label fx:id="fifthScore" maxHeight="100.0" maxWidth="200.0" minHeight="100.0" minWidth="200.0" prefHeight="100.0" prefWidth="200.0" text="12" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Supersonic Rocketship" size="73.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+    </children>
+</Pane>

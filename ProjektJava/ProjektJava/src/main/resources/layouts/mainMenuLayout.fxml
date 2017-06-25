@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1590.0" stylesheets="@../myStyles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.mainMenuController">
+   <children>
+      <ImageView fitHeight="900.0" fitWidth="1600.0" layoutX="-10.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bigPictures/mainmenubackgroundpluslogo.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="195.0" layoutY="496.0" prefHeight="300.0" prefWidth="1200.0">
+         <children>
+            <ImageView fitHeight="300.0" fitWidth="300.0" onMouseClicked="#startGame" onMouseEntered="#startButtonChange" onMouseExited="#startButtonReset" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/startgame.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="300.0" fitWidth="300.0" onMouseClicked="#options" onMouseEntered="#optionsButtonChange" onMouseExited="#optionsButtonReset" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/options.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="300.0" fitWidth="300.0" onMouseClicked="#highscores" onMouseEntered="#highscoresButtonChange" onMouseExited="#highscoresButtonReset" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/highscores.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="300.0" fitWidth="300.0" onMouseClicked="#exitGame" onMouseEntered="#exitButtonChange" onMouseExited="#exitButtonReset" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/exitbt.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="1500.0" layoutY="800.0" onMouseClicked="#info" onMouseEntered="#infoButtonChange" onMouseExited="#infoButtonReset" pickOnBounds="true" preserveRatio="true" x="-100.0" y="-100.0">
+         <image>
+            <Image url="@../icons/infobutton.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="help" fitHeight="716.0" fitWidth="1216.0" layoutX="200.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../bigPictures/help.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

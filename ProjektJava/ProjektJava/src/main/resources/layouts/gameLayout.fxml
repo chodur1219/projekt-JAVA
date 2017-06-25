@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1590.0" stylesheets="@../myStyles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.gameController">
+    <children>
+        <ImageView fitHeight="900.0" fitWidth="1600.0" layoutX="-10.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../bigPictures/background.png" />
+            </image>
+        </ImageView>
+      <ImageView fitHeight="739.0" fitWidth="959.0" layoutX="233.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bigPictures/codeBreakerNotebook.png" />
+         </image>
+      </ImageView>
+        <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="1325.0" layoutY="650.0" onMouseClicked="#backToMainMenu" onMouseEntered="#backButtonChange" onMouseExited="#backButtonReset" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../icons/backButton.png" />
+            </image>
+        </ImageView>
+      <ImageView fitHeight="517.0" fitWidth="403.0" layoutX="1190.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bigPictures/codeBreaker.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="522.0" layoutY="690.0" onMouseClicked="#checkAnswer" onMouseEntered="#checkButtonChange" onMouseExited="#checkButtonReset" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/checkButton.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="108.0" fitWidth="217.0" layoutX="1080.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bigPictures/cable2.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="1239.0" layoutY="347.0" prefHeight="150.0" prefWidth="150.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#oneC" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/one.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#twoC" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/two.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#threeC" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/three.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#fourC" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/four.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#fiveC" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/five.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#sixC" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/six.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#backC" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/clear.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fitHeight="108.0" fitWidth="217.0" layoutX="1080.0" layoutY="548.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bigPictures/cable.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1292.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bigPictures/input.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="playersGuess" layoutX="1342.0" layoutY="262.0" prefHeight="64.0" prefWidth="108.0" textAlignment="CENTER">
+         <font>
+            <Font name="Supersonic Rocketship" size="48.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="179.0" layoutX="727.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bigPictures/correct.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="886.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bigPictures/wrongPosition.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="225.0" layoutX="411.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bigPictures/input.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="225.0" layoutX="411.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bigPictures/input.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="225.0" layoutX="411.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bigPictures/input.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="225.0" layoutX="411.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bigPictures/input.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="225.0" layoutX="411.0" layoutY="379.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bigPictures/input.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="225.0" layoutX="411.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bigPictures/input.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="225.0" layoutX="411.0" layoutY="519.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bigPictures/input.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="225.0" layoutX="411.0" layoutY="589.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bigPictures/input.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="225.0" layoutX="411.0" layoutY="659.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bigPictures/input.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="475.0" layoutY="95.0" prefHeight="600.0" prefWidth="650.0">
+         <children>
+            <HBox prefHeight="57.0" prefWidth="649.0">
+               <children>
+                  <Label fx:id="att1" prefHeight="70.0" prefWidth="300.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="Supersonic Rocketship" size="50.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="corr1" fitHeight="69.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/zeroGood.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="66.0" prefWidth="106.0" />
+                  <ImageView fx:id="wrong1" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/zeroClose.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="57.0" prefWidth="649.0">
+               <children>
+                  <Label fx:id="att2" prefHeight="70.0" prefWidth="300.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="Supersonic Rocketship" size="50.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="corr2" fitHeight="69.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/zeroGood.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="66.0" prefWidth="106.0" />
+                  <ImageView fx:id="wrong2" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/zeroClose.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="57.0" prefWidth="649.0">
+               <children>
+                  <Label fx:id="att3" prefHeight="70.0" prefWidth="300.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="Supersonic Rocketship" size="50.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="corr3" fitHeight="69.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/zeroGood.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="66.0" prefWidth="106.0" />
+                  <ImageView fx:id="wrong3" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/zeroClose.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="57.0" prefWidth="649.0">
+               <children>
+                  <Label fx:id="att4" prefHeight="70.0" prefWidth="300.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="Supersonic Rocketship" size="50.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="corr4" fitHeight="69.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/zeroGood.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="66.0" prefWidth="106.0" />
+                  <ImageView fx:id="wrong4" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/zeroClose.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="57.0" prefWidth="649.0">
+               <children>
+                  <Label fx:id="att5" prefHeight="70.0" prefWidth="300.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="Supersonic Rocketship" size="50.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="corr5" fitHeight="69.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/zeroGood.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="66.0" prefWidth="106.0" />
+                  <ImageView fx:id="wrong5" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/zeroClose.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="57.0" prefWidth="649.0">
+               <children>
+                  <Label fx:id="att6" prefHeight="70.0" prefWidth="300.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="Supersonic Rocketship" size="50.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="corr6" fitHeight="69.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/zeroGood.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="66.0" prefWidth="106.0" />
+                  <ImageView fx:id="wrong6" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/zeroClose.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="57.0" prefWidth="649.0">
+               <children>
+                  <Label fx:id="att7" prefHeight="70.0" prefWidth="300.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="Supersonic Rocketship" size="50.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="corr7" fitHeight="69.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/zeroGood.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="66.0" prefWidth="106.0" />
+                  <ImageView fx:id="wrong7" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/zeroClose.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="57.0" prefWidth="649.0">
+               <children>
+                  <Label fx:id="att8" prefHeight="70.0" prefWidth="300.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="Supersonic Rocketship" size="50.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="corr8" fitHeight="69.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/zeroGood.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="66.0" prefWidth="106.0" />
+                  <ImageView fx:id="wrong8" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/zeroClose.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="57.0" prefWidth="649.0">
+               <children>
+                  <Label fx:id="att9" prefHeight="70.0" prefWidth="300.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="Supersonic Rocketship" size="50.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="corr9" fitHeight="69.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/zeroGood.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="66.0" prefWidth="106.0" />
+                  <ImageView fx:id="wrong9" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/digits/zeroClose.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fx:id="loseScreen" fitHeight="900.0" fitWidth="1600.0" layoutX="-10.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../bigPictures/loseScreen.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="winScreen" fitHeight="900.0" fitWidth="1600.0" layoutX="-10.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../bigPictures/winScreen.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="822.0" layoutY="690.0" onMouseClicked="#reset" onMouseEntered="#resetButtonChange" onMouseExited="#resetButtonReset" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/resetButton.png" />
+         </image>
+      </ImageView>
+    </children>
+</Pane>
